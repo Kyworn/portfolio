@@ -1,0 +1,19 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#0ff">$ python manage.py runserver</text>
+  
+  <!-- Admin UI Mockup -->
+  <rect x="50" y="80" width="700" height="450" fill="#151515" stroke="#333"/>
+  <rect x="50" y="80" width="150" height="450" fill="#222"/> <!-- Sidebar -->
+  
+  <rect x="220" y="100" width="150" height="80" fill="#0ff" opacity="0.1"/>
+  <text x="230" y="130" font-family="monospace" font-size="12" fill="#0ff">Active Users</text>
+  <text x="230" y="150" font-family="monospace" font-size="24" fill="#fff">1,240</text>
+  
+  <rect x="400" y="100" width="150" height="80" fill="#f0f" opacity="0.1"/>
+  <text x="410" y="130" font-family="monospace" font-size="12" fill="#f0f">Server Load</text>
+  <text x="410" y="150" font-family="monospace" font-size="24" fill="#fff">42ms</text>
+  
+  <rect x="220" y="220" width="500" height="200" fill="#000" stroke="#333"/>
+  <text x="240" y="250" font-family="monospace" font-size="12" fill="#666">Logs...</text>
+</svg>

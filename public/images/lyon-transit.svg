@@ -1,0 +1,26 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#ffb000">$ connect --target=tcl_api_v2</text>
+  <text x="20" y="70" font-family="monospace" font-size="14" fill="#0f0">Connection established. Stream active.</text>
+  
+  <!-- Map Grid -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#222" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="0" y="100" width="800" height="500" fill="url(#grid)" />
+  
+  <!-- Route Lines -->
+  <path d="M 100 500 L 200 400 L 400 400 L 600 200" stroke="#ffb000" stroke-width="4" fill="none"/>
+  <circle cx="200" cy="400" r="6" fill="#ffb000" />
+  <circle cx="400" cy="400" r="6" fill="#ffb000" />
+  <circle cx="600" cy="200" r="6" fill="#ffb000" />
+  
+  <!-- Moving blip -->
+  <circle cx="300" cy="400" r="4" fill="#fff">
+    <animate attributeName="opacity" values="0;1;0" dur="1s" repeatCount="indefinite" />
+  </circle>
+  
+  <text x="600" y="50" font-family="monospace" font-size="12" fill="#ffb000">BUS_ID: 6922 [ON_TIME]</text>
+</svg>

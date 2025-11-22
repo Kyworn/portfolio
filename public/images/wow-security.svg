@@ -1,0 +1,16 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#f00">$ ghidra_analyze --headless ./wow_client.exe</text>
+  
+  <!-- Hex Dump -->
+  <text x="20" y="100" font-family="monospace" font-size="14" fill="#444">00401000  55 89 E5 83 EC 10 C7 45</text>
+  <text x="20" y="120" font-family="monospace" font-size="14" fill="#444">00401008  FC 00 00 00 00 8B 45 08</text>
+  <text x="20" y="140" font-family="monospace" font-size="14" fill="#f00">00401010  Opcodes detected: POTENTIAL_OVERFLOW</text>
+  <text x="20" y="160" font-family="monospace" font-size="14" fill="#444">00401018  50 E8 EF FF FF FF 83 C4</text>
+  
+  <rect x="400" y="80" width="350" height="400" fill="#000" stroke="#f00" stroke-width="1" opacity="0.5"/>
+  <text x="420" y="110" font-family="monospace" font-size="12" fill="#f00">VULNERABILITY SCAN</text>
+  <text x="420" y="140" font-family="monospace" font-size="12" fill="#fff">Buffer Overflow: DETECTED</text>
+  <text x="420" y="160" font-family="monospace" font-size="12" fill="#fff">Auth Bypass: POSSIBLE</text>
+  <text x="420" y="180" font-family="monospace" font-size="12" fill="#fff">Encryption: WEAK (SRP6)</text>
+</svg>

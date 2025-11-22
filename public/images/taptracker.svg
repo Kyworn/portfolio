@@ -1,0 +1,13 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#cc00ff">$ node server.js --port=3000</text>
+  
+  <rect x="200" y="200" width="400" height="100" fill="#1a1a1a" stroke="#cc00ff" rx="10"/>
+  <text x="350" y="255" font-family="monospace" font-size="24" fill="#fff">COUNTER: 42</text>
+  
+  <circle cx="300" cy="400" r="30" fill="#333" stroke="#666"/>
+  <text x="290" y="405" font-family="monospace" font-size="20" fill="#fff">-</text>
+  
+  <circle cx="500" cy="400" r="30" fill="#cc00ff"/>
+  <text x="490" y="405" font-family="monospace" font-size="20" fill="#fff">+</text>
+</svg>

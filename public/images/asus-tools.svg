@@ -1,0 +1,16 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#00ccff">$ apt-get install asus-linux-tools</text>
+  
+  <rect x="100" y="150" width="600" height="300" fill="#1a1a1a" stroke="#00ccff" stroke-width="1"/>
+  <rect x="120" y="180" width="20" height="20" fill="#00ccff"/>
+  <text x="160" y="195" font-family="monospace" font-size="14" fill="#fff">Checking kernel modules...</text>
+  
+  <rect x="120" y="220" width="20" height="20" fill="#00ccff"/>
+  <text x="160" y="235" font-family="monospace" font-size="14" fill="#fff">Configuring supergfxctl...</text>
+  
+  <rect x="120" y="260" width="20" height="20" fill="#00ccff"/>
+  <text x="160" y="275" font-family="monospace" font-size="14" fill="#fff">Building DKMS drivers...</text>
+  
+  <text x="120" y="350" font-family="monospace" font-size="14" fill="#00ccff">SUCCESS: System optimized for Debian 13</text>
+</svg>

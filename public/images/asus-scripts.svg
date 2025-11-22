@@ -1,0 +1,10 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="600" fill="#101010"/>
+  <text x="20" y="40" font-family="monospace" font-size="14" fill="#ff0055">$ ./rog-control.sh --mode=performance</text>
+  
+  <path d="M 200 300 L 300 200 L 400 300 L 500 200 L 600 300" stroke="#333" stroke-width="2" fill="none"/>
+  <path d="M 200 450 L 300 150 L 400 250 L 500 100 L 600 400" stroke="#ff0055" stroke-width="2" fill="none"/>
+  
+  <text x="200" y="500" font-family="monospace" font-size="14" fill="#ff0055">GPU CLOCK: 1800MHz [BOOST]</text>
+  <text x="200" y="530" font-family="monospace" font-size="14" fill="#666">FAN SPEED: 85%</text>
+</svg>
