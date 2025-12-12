@@ -1,25 +1,39 @@
-# Portfolio - AI-Native Architect
+# Portfolio - Infrastructure & SysAdmin
 
-> "Le code est une commodité. L'architecture et la vision sont les nouvelles ressources rares."
+> "L'IA ne remplace pas la rigueur technique, elle accélère la sécurisation et l'automatisation de l'infrastructure."
 
-Ce portfolio illustre mon approche en tant qu'**AI-Native Architect**. Je ne me contente pas d'écrire du code ; j'orchestre des modèles d'IA pour concevoir, auditer et déployer des solutions complexes avec une agilité extrême.
+Ce portfolio est plus qu'une simple vitrine web : c'est une démonstration opérationnelle. **Auto-hébergé** sur mon propre cluster Proxmox, il illustre mon approche du métier d'Administrateur Système : pragmatisme, "bonne méfiance" et automatisation intelligente.
 
 ## 🚀 En ligne
 
 **[https://zorko.xyz](https://zorko.xyz)**
+*(Accessibilité garantie via Cloudflare Zero Trust Tunnel)*
+
+## 🏗 Architecture & Hébergement
+
+Ce projet n'est pas hébergé sur Vercel ou Netlify, mais sur mon infrastructure personnelle pour garder la maîtrise des données et du flux.
+
+- **Hyperviseur :** Proxmox VE (Cluster local)
+- **Conteneurisation :** Docker (Image optimisée multi-stage)
+- **OS Hôte :** Debian 12 (Bookworm)
+- **Réseau :** Cloudflare Zero Trust (Sécurisation sans ouverture de port critique)
 
 ## 🛠 Stack Technique
 
-- **Frontend :** Next.js, Tailwind CSS, Framer Motion
-- **Design :** Ops Dashboard / Bento Grid (Dark Mode)
-- **Infrastructure :** Docker, Proxmox, Cloudflare Zero Trust (Tunnel)
-- **Méthodologie :** "Code is a commodity" - Orchestration via Claude Code & Gemini CLI.
+- **Frontend :** Next.js, Tailwind CSS (Pour la performance et le SEO)
+- **Design :** Interface type "Ops Dashboard" / Bento Grid
+- **Orchestration :** Scripts de déploiement assistés par IA (Claude Code / Gemini CLI) pour valider la robustesse du code avant la mise en prod.
 
-## 📦 Déploiement
+## 📦 Déploiement Local
 
-Projet conteneurisé pour déploiement sur Homelab (Proxmox).
+Le projet est entièrement conteneurisé pour être agnostique de l'infrastructure.
 
 ```bash
-# Lancer le conteneur
+# 1. Cloner le repo
+git clone [https://github.com/Kyworn/portfolio.git](https://github.com/Kyworn/portfolio.git)
+
+# 2. Lancer le conteneur (Build optimisé)
 docker compose up -d --build
-```
+
+# 3. Vérifier les logs
+docker compose logs -f
