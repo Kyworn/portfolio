@@ -31,9 +31,11 @@ Le projet est entièrement conteneurisé pour être agnostique de l'infrastructu
 ```bash
 # 1. Cloner le repo
 git clone [https://github.com/Kyworn/portfolio.git](https://github.com/Kyworn/portfolio.git)
+# 2. Crée ke network 
+docker network create zorko-net
 
-# 2. Lancer le conteneur (Build optimisé)
+# 3. Lancer le conteneur (Build optimisé)
 docker compose up -d --build
 
-# 3. Vérifier les logs
+# 4. Vérifier les logs
 docker compose logs -f
