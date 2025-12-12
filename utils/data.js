@@ -1,4 +1,4 @@
-update // @ts-check
+// @ts-check
 import { v4 as uuidv4 } from 'uuid';
 
 export const RESUME_DATA = {
@@ -139,4 +139,76 @@ Aujourd'hui, je cherche à mettre cette polyvalence (Hardware, Système, Humain)
         id: 'wow-research-335a',
         title: 'WOW-RESEARCH-335A',
         category: 'Security Research',
-        link: "
+        link: "https://github.com/Kyworn/WOW-335A-SECURITY-RESEARCH",
+        img: '/images/wow-security.svg',
+        aiTools: ['Local LLM (Mistral)', 'Ghidra'],
+        ProjectHeader: {
+            title: 'Analyse Binaire & Sécurité',
+            publishDate: 'Novembre 2025',
+            tags: 'Reverse Engineering / C++',
+        },
+        technologies: ["Ghidra", "C++", "Python", "Cryptography"],
+        description: "Workflow de reverse engineering hybride. Analyse de fonctions décompilées par Ghidra pour identifier des failles logiques. Automatisation via scripts Python pour l'audit de sécurité.",
+      },
+      {
+        id: 'asus-x13-scripts',
+        title: 'ASUS-X13-OPTIMIZER',
+        category: 'Hardware Automation',
+        link: 'https://github.com/Kyworn/ASUS-X13-SCRIPTS',
+        img: '/images/asus-scripts.svg',
+        aiTools: ['Bash', 'Gemini'],
+        ProjectHeader: {
+            title: 'Optimisation Power/GPU',
+            publishDate: '2025',
+            tags: 'Shell / Hardware',
+        },
+        technologies: ['Bash', 'Linux Kernel', 'ACPI'],
+        description: "Scripts d'automatisation pour la gestion fine de l'alimentation et du GPU switching sur laptop ASUS ROG. Optimisation de l'autonomie sous environnement Linux.",
+      },
+       {
+        id: 'azeroth-admin',
+        title: 'AZEROTH-ADMIN',
+        category: 'Full-Stack Security',
+        link: "https://github.com/Kyworn/AZEROTH-ADMIN-PANEL",
+        img: '/images/wowadminpanel.png',
+        aiTools: ['Claude Code', 'Gemini CLI'],
+        ProjectHeader: {
+            title: 'Panel Admin Sécurisé',
+            publishDate: 'Octobre 2025',
+            tags: 'Flask / Auth SRP6',
+        },
+        technologies: ["Python", "Flask", "MySQL", "SRP6 Auth"],
+        description: "Développement d'un panel d'administration. Implémentation stricte du protocole SRP6 (Secure Remote Password) pour sécuriser l'authentification et éviter les failles classiques.",
+      },
+      {
+        id: 'transit-tcl-live',
+        title: 'TRANSIT-TCL-LIVE',
+        category: 'Real-Time App',
+        link: "https://github.com/Kyworn/LYON-TRANSIT-VIEWER",
+        img: '/images/tcl.png',
+        aiTools: ['Claude Code'],
+        ProjectHeader: {
+            title: 'Suivi Transports Lyon',
+            publishDate: 'Novembre 2025',
+            tags: 'Full-Stack / Monitoring',
+        },
+        technologies: ["React", "TypeScript", "Node.js", "Mapbox", "API TCL"],
+        description: "Architecture réactive pour le suivi temps réel. Définition de la logique métier et de l'UX par mes soins, implémentation technique accélérée par IA. Audit de performance réalisé.",
+      },
+      {
+        id: 'hubeau-data-viz',
+        title: 'HUBEAU-OPEN-DATA',
+        category: 'Data Visualisation',
+        link: "https://github.com/Kyworn/HUBEAU",
+        img: '/images/hubeau.svg',
+        aiTools: ['Gemini CLI', 'Claude Code'],
+        ProjectHeader: {
+            title: 'Visualisation Qualité Eau',
+            publishDate: 'Septembre 2025',
+            tags: 'Data / Scripting',
+        },
+        technologies: ["JavaScript", "Python", "API REST", "Chart.js"],
+        description: "Transformation de données brutes gouvernementales en dashboard. Scripts de parsing massif et visualisation de données.",
+      },
+    ],
+};
