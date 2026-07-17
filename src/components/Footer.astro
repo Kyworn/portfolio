@@ -1,8 +1,11 @@
 ---
 import { t, type Lang } from '../i18n/ui';
 const { lang } = Astro.props as { lang: Lang };
+const tr = t(lang);
 ---
-<footer class="mx-auto max-w-4xl px-4 py-10 text-sm text-zinc-500 flex justify-between">
-  <span>{t(lang)('footer.selfhosted')}</span>
-  <a href="https://github.com/Kyworn" class="hover:underline">GitHub</a>
+<footer class="border-t border-line mt-10">
+  <div class="mx-auto max-w-4xl px-4 py-8 font-mono text-[11px] text-faint flex flex-wrap gap-x-6 gap-y-2 justify-between">
+    <span><span class="text-accent">zorko.xyz</span> — {tr('meta.served')} <span class="text-accent">pve/lxc-121</span></span>
+    <a href="https://github.com/Kyworn" class="hover:text-accent transition-colors">github.com/Kyworn</a>
+  </div>
 </footer>

@@ -6,11 +6,13 @@ const path = Astro.url.pathname;
 const otherLocaleHref = lang === 'fr' ? path.replace(/^\/fr/, '') || '/' : `/fr${path}`;
 const tr = t(lang);
 ---
-<header class="mx-auto max-w-4xl px-4 py-6 flex items-center justify-between">
-  <a href={base || '/'} class="font-bold text-lg">zorko.xyz</a>
-  <nav class="flex gap-6 text-sm">
-    <a href={`${base}/#projects`} class="hover:underline">{tr('nav.projects')}</a>
-    <a href={`${base}/about`} class="hover:underline">{tr('nav.about')}</a>
-    <a href={otherLocaleHref} class="text-zinc-500 hover:underline">{lang === 'fr' ? 'EN' : 'FR'}</a>
-  </nav>
+<header class="border-b border-line">
+  <div class="mx-auto max-w-4xl px-4 py-4 flex items-center justify-between">
+    <a href={base || '/'} class="font-mono text-sm">zorko<span class="text-accent">●</span>xyz</a>
+    <nav class="flex gap-5 font-mono text-[11px] uppercase tracking-widest">
+      <a href={`${base}/#projects`} class="hover:text-accent transition-colors">{tr('nav.projects')}</a>
+      <a href={`${base}/about`} class="hover:text-accent transition-colors">{tr('nav.about')}</a>
+      <a href={otherLocaleHref} class="text-faint hover:text-accent transition-colors">{lang === 'fr' ? 'EN' : 'FR'}</a>
+    </nav>
+  </div>
 </header>

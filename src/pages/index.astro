@@ -3,13 +3,19 @@ import Base from '../layouts/Base.astro';
 import ProjectGrid from '../components/ProjectGrid.astro';
 ---
 <Base title="Zorko — Open source projects" description="LLM quantization research, Linux kernel drivers, self-hosted infrastructure. Open source projects by Zorko (Kyworn)." lang="en">
-  <section class="mb-12">
-    <h1 class="text-3xl font-bold mb-3">Zorko</h1>
-    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl">
-      Sysadmin and hardware tinkerer. I do LLM quantization research (PentaNet, ShiftQuant),
-      write Linux drivers and tooling, and run everything on my own Proxmox cluster —
-      including this site.
+  <section class="mb-16 pt-6">
+    <h1 class="display text-5xl sm:text-7xl leading-[0.95] mb-6">Build.<br>Reverse.<br><span class="stroke">Quantize.</span></h1>
+    <p class="text-muted max-w-xl leading-relaxed mb-6">
+      Self-taught maker. LLM quantization research, AMD reverse engineering,
+      Linux drivers and a Proxmox homelab — all open source, all self-hosted,
+      this site included.
     </p>
+    <div class="flex flex-wrap gap-2 font-mono text-[11px]">
+      <span class="border border-accent text-accent rounded-full px-3 py-1">15 projects</span>
+      <span class="border border-line text-muted rounded-full px-3 py-1">ML research</span>
+      <span class="border border-line text-muted rounded-full px-3 py-1">reverse engineering</span>
+      <span class="border border-line text-muted rounded-full px-3 py-1">self-hosted</span>
+    </div>
   </section>
   <ProjectGrid lang="en" />
 </Base>

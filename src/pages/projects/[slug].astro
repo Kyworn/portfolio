@@ -11,14 +11,14 @@ const { Content } = await render(project);
 const { title, description, repo, links, tech } = project.data;
 ---
 <Base title={`${title} — Zorko`} description={description} lang="en">
-  <article class="prose prose-zinc dark:prose-invert max-w-none">
+  <article class="prose max-w-none">
     <h1>{title}</h1>
-    <p class="lead">{description}</p>
-    <p class="flex gap-4 not-prose text-sm">
-      <a href={repo} class="underline">GitHub</a>
-      {links.map((l) => <a href={l.url} class="underline">{l.label}</a>)}
-      <span class="text-zinc-500 ml-auto">{tech.join(' · ')}</span>
-    </p>
+    <p class="lead text-muted">{description}</p>
+    <div class="not-prose flex flex-wrap items-center gap-4 font-mono text-xs border-y border-line py-3 mb-8">
+      <a href={repo} class="text-accent hover:underline">GitHub →</a>
+      {links.map((l) => <a href={l.url} class="text-accent hover:underline">{l.label} →</a>)}
+      <span class="text-muted ml-auto">{tech.join(' · ')}</span>
+    </div>
     <Content />
   </article>
 </Base>

@@ -6,13 +6,17 @@ const { lang } = Astro.props as { lang: 'en' | 'fr' };
 const all = (await getCollection('projects', (e) => e.id.startsWith(`${lang}/`)))
   .sort((a, b) => a.data.order - b.data.order);
 const cats = Object.entries(CATEGORIES) as [keyof typeof CATEGORIES, (typeof CATEGORIES)[keyof typeof CATEGORIES]][];
+const word = lang === 'fr' ? 'projets' : 'projects';
 ---
-<section id="projects" class="flex flex-col gap-10">
+<section id="projects" class="flex flex-col gap-12">
   {cats.map(([key, label]) => {
     const items = all.filter((p) => p.data.category === key);
     return items.length > 0 && (
       <div>
-        <h2 class="text-xl font-bold mb-4">{label[lang]}</h2>
+        <h2 class="display flex items-baseline gap-3 mb-5 text-xl">
+          {label[lang]}
+          <span class="font-mono text-[11px] normal-case tracking-normal text-accent">// {items.length} {word}</span>
+        </h2>
         <div class="grid sm:grid-cols-2 gap-4">
           {items.map((p) => <ProjectCard project={p} lang={lang} />)}
         </div>

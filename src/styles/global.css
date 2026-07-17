@@ -1,2 +1,71 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
+
+@import '@fontsource/archivo-black/400.css';
+@import '@fontsource/ibm-plex-sans/400.css';
+@import '@fontsource/ibm-plex-sans/600.css';
+@import '@fontsource/ibm-plex-sans/700.css';
+@import '@fontsource/ibm-plex-mono/400.css';
+@import '@fontsource/ibm-plex-mono/500.css';
+
+/* Workbench: committed dark theme */
+:root {
+  --bg: #0d0d0c;
+  --surface: #151511;
+  --glass: rgba(255, 255, 255, 0.045);
+  --ink: #f2efe8;
+  --muted: #b5b1a6;
+  --faint: #8f8c84;
+  --accent: #ff5c00;
+  --line: #26251f;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-glass: var(--glass);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+  --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, 'SF Mono', monospace;
+  --font-display: 'Archivo Black', 'IBM Plex Sans', system-ui, sans-serif;
+}
+
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+.display .stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--accent);
+}
+
+.prose {
+  --tw-prose-body: var(--ink);
+  --tw-prose-headings: var(--ink);
+  --tw-prose-bold: var(--ink);
+  --tw-prose-links: var(--accent);
+  --tw-prose-code: var(--accent);
+  --tw-prose-quotes: var(--muted);
+  --tw-prose-hr: var(--line);
+  --tw-prose-th-borders: var(--line);
+  --tw-prose-td-borders: var(--line);
+  --tw-prose-pre-bg: var(--surface);
+  --tw-prose-pre-code: var(--ink);
+  --tw-prose-bullets: var(--accent);
+  --tw-prose-counters: var(--accent);
+}
+.prose :where(pre) {
+  border-left: 3px solid var(--accent);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+}
+.prose :where(code):not(:where(pre code))::before,
+.prose :where(code):not(:where(pre code))::after {
+  content: none;
+}
