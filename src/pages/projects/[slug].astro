@@ -1,0 +1,24 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const featured = await getCollection('projects', (e) => e.id.startsWith('en/') && e.data.featured);
+  return featured.map((p) => ({ params: { slug: p.id.split('/')[1] }, props: { project: p } }));
+}
+const { project } = Astro.props;
+const { Content } = await render(project);
+const { title, description, repo, links, tech } = project.data;
+---
+<Base title={`${title} — Zorko`} description={description} lang="en">
+  <article class="prose prose-zinc dark:prose-invert max-w-none">
+    <h1>{title}</h1>
+    <p class="lead">{description}</p>
+    <p class="flex gap-4 not-prose text-sm">
+      <a href={repo} class="underline">GitHub</a>
+      {links.map((l) => <a href={l.url} class="underline">{l.label}</a>)}
+      <span class="text-zinc-500 ml-auto">{tech.join(' · ')}</span>
+    </p>
+    <Content />
+  </article>
+</Base>
