@@ -20,7 +20,8 @@ Ce projet n'est pas hébergé sur Vercel ou Netlify, mais sur mon infrastructure
 
 ## 🛠 Stack Technique
 
-- **Frontend :** Next.js, Tailwind CSS (Pour la performance et le SEO)
+- **Frontend :** Astro 5 (SSG), Tailwind CSS 4 (Pour la performance et le SEO)
+- **Serving :** Build statique servi par nginx:alpine
 - **Design :** Interface type "Ops Dashboard" / Bento Grid
 - **Orchestration :** Scripts de déploiement assistés par IA (Claude Code / Gemini CLI) pour valider la robustesse du code avant la mise en prod.
 
