@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+---
+<Base title="À propos — Zorko" description="Sysadmin, bidouilleur de hardware, chercheur en quantization LLM. À propos de Zorko et du homelab ZorkoLab." lang="fr">
+  <article class="prose prose-zinc dark:prose-invert max-w-none">
+    <!-- DRAFT: needs author review -->
+    <h1>À propos</h1>
+    <p>Passionné de hardware, de Proxmox, de sysadmin et d'IA. Je crois en l'auto-hébergement
+    de mon infrastructure : ce site est servi depuis un cluster Proxmox chez moi, derrière
+    Cloudflare Zero Trust — ni Vercel, ni Netlify.</p>
+    <h2>Homelab</h2>
+    <p>ZorkoLab : cluster Proxmox VE, TrueNAS Scale sur ZFS RAID1, ~12 conteneurs LXC
+    (Gitea, Grafana, AdGuard, Vaultwarden, stack média…), tunnel Cloudflare Zero Trust.
+    Documentation complète dans le <a href="https://github.com/Kyworn/ZorkoLab">dépôt ZorkoLab</a>.</p>
+    <h2>Recherche</h2>
+    <p>Quantization LLM : PentaNet (quantization pentanaire, −6,4% de perplexité vs BitNet) et
+    ShiftQuant (analyse de PTQ à base de décalages). PyTorch, Triton, AVX2, une RTX 5080.</p>
+    <h2>Contact</h2>
+    <p><a href="https://github.com/Kyworn">GitHub</a> · <a href="mailto:kyworn@gmail.com">Email</a></p>
+  </article>
+</Base>
