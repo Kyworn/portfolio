@@ -1,6 +1,6 @@
 ---
 title: PentaNet
-description: Quantization pentanaire native {-2,-1,0,+1,+2} pour LLM — -6,4% de perplexité vs BitNet à 124M de paramètres, tout en préservant l'arithmétique sans multiplicateur.
+description: Quantization pentanaire native {-2,-1,0,+1,+2} pour LLM — −6,4% de perplexité vs BitNet à 124M de paramètres, tout en préservant l'arithmétique sans multiplicateur.
 category: ai-research
 featured: true
 repo: https://github.com/Kyworn/PentaNet-v1.0
@@ -17,7 +17,7 @@ BitNet a montré que des poids ternaires {-1,0,+1} peuvent entraîner des LLM sa
 
 ## Résultats
 
--6,4% de perplexité vs BitNet à 124M de paramètres, 3 seeds, WikiText-103. Courbes d'entraînement complètes et ablations dans le rapport technique.
+−6,4% de perplexité vs BitNet à 124M de paramètres, 3 seeds, WikiText-103. Courbes d'entraînement complètes et ablations dans le rapport technique.
 
 ## Démarrage rapide
 
