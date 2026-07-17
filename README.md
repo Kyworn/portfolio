@@ -1,43 +1,41 @@
-# Astro Starter Kit: Minimal
+# Portfolio - Infrastructure & SysAdmin
 
-```sh
-npm create astro@latest -- --template minimal
-```
+> "L'IA ne remplace pas la rigueur technique, elle accélère la sécurisation et l'automatisation de l'infrastructure."
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Ce portfolio est plus qu'une simple vitrine web : c'est une démonstration opérationnelle. **Auto-hébergé** sur mon propre cluster Proxmox, il illustre mon approche du métier d'Administrateur Système : pragmatisme, "bonne méfiance" et automatisation intelligente.
 
-## 🚀 Project Structure
+## 🚀 En ligne
 
-Inside of your Astro project, you'll see the following folders and files:
+**[https://zorko.xyz](https://zorko.xyz)**
+*(Accessibilité garantie via Cloudflare Zero Trust Tunnel)*
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## 🏗 Architecture & Hébergement
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Ce projet n'est pas hébergé sur Vercel ou Netlify, mais sur mon infrastructure personnelle pour garder la maîtrise des données et du flux.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- **Hyperviseur :** Proxmox VE (Cluster local)
+- **Conteneurisation :** Docker (Image optimisée multi-stage)
+- **OS Hôte :** Debian 12 (Bookworm)
+- **Réseau :** Cloudflare Zero Trust (Sécurisation sans ouverture de port critique)
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🛠 Stack Technique
 
-## 🧞 Commands
+- **Frontend :** Next.js, Tailwind CSS (Pour la performance et le SEO)
+- **Design :** Interface type "Ops Dashboard" / Bento Grid
+- **Orchestration :** Scripts de déploiement assistés par IA (Claude Code / Gemini CLI) pour valider la robustesse du code avant la mise en prod.
 
-All commands are run from the root of the project, from a terminal:
+## 📦 Déploiement Local
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Le projet est entièrement conteneurisé pour être agnostique de l'infrastructure.
 
-## 👀 Want to learn more?
+```bash
+# 1. Cloner le repo
+git clone [https://github.com/Kyworn/portfolio.git](https://github.com/Kyworn/portfolio.git)
+# 2. Crée ke network 
+docker network create zorko-net
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+# 3. Lancer le conteneur (Build optimisé)
+docker compose up -d --build
+
+# 4. Vérifier les logs
+docker compose logs -f
