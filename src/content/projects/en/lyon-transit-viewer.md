@@ -25,4 +25,6 @@ spacetime start --listen-addr 127.0.0.1:3000
 spacetime publish --server local --module-path spacetimedb/spacetimedb --yes lyon-transit
 cd frontend && npm install && npm run build
 python3 -m http.server 3001 --bind 127.0.0.1 -d build
+# In another terminal, start the ingest daemon for live data:
+./scripts/ingest_daemon.sh
 ```

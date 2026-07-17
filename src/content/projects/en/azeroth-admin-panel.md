@@ -4,7 +4,7 @@ description: Flask web admin panel for AzerothCore WoW private servers — accou
 category: selfhosted-infra
 featured: false
 repo: https://github.com/Kyworn/azeroth-admin-panel
-tech: [PHP, AzerothCore]
+tech: [Python, Flask, AzerothCore]
 install: "git clone https://github.com/Kyworn/azeroth-admin-panel.git && cd azeroth-admin-panel && pip install -r requirements.txt"
 order: 3
 ---
