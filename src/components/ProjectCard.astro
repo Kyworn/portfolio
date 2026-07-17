@@ -1,0 +1,20 @@
+---
+import type { CollectionEntry } from 'astro:content';
+const { project, lang } = Astro.props as { project: CollectionEntry<'projects'>; lang: string };
+const { title, description, featured, repo, install, tech } = project.data;
+const slug = project.id.split('/')[1];
+const base = lang === 'fr' ? '/fr' : '';
+---
+<article class="rounded-lg border border-zinc-200 dark:border-zinc-800 p-4 flex flex-col gap-2">
+  <h3 class="font-semibold">
+    {featured
+      ? <a href={`${base}/projects/${slug}`} class="hover:underline">{title}</a>
+      : <a href={repo} class="hover:underline">{title}</a>}
+  </h3>
+  <p class="text-sm text-zinc-600 dark:text-zinc-400">{description}</p>
+  {install && <code class="text-xs bg-zinc-100 dark:bg-zinc-900 rounded px-2 py-1 overflow-x-auto">{install}</code>}
+  <div class="mt-auto flex items-center gap-3 text-xs text-zinc-500">
+    {tech.map((t: string) => <span>{t}</span>)}
+    <a href={repo} class="ml-auto hover:underline">GitHub →</a>
+  </div>
+</article>

@@ -1,17 +1,15 @@
 ---
-
+import Base from '../layouts/Base.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base title="Zorko — Open source projects" description="LLM quantization research, Linux kernel drivers, self-hosted infrastructure. Open source projects by Zorko (Kyworn)." lang="en">
+  <section class="mb-12">
+    <h1 class="text-3xl font-bold mb-3">Zorko</h1>
+    <p class="text-zinc-600 dark:text-zinc-400 max-w-2xl">
+      Sysadmin and hardware tinkerer. I do LLM quantization research (PentaNet, ShiftQuant),
+      write Linux drivers and tooling, and run everything on my own Proxmox cluster —
+      including this site.
+    </p>
+  </section>
+  <ProjectGrid lang="en" />
+</Base>
