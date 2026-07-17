@@ -2,12 +2,14 @@ export const ui = {
   en: {
     'nav.projects': 'Projects',
     'nav.about': 'About',
+    'nav.cv': 'CV',
     'footer.selfhosted': 'Self-hosted on my own Proxmox cluster',
     'meta.served': 'served from a Proxmox cluster at home',
   },
   fr: {
     'nav.projects': 'Projets',
     'nav.about': 'À propos',
+    'nav.cv': 'CV',
     'footer.selfhosted': 'Auto-hébergé sur mon propre cluster Proxmox',
     'meta.served': 'servi depuis un cluster Proxmox à la maison',
   },
