@@ -1,0 +1,16 @@
+---
+import { t, type Lang } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+const base = lang === 'fr' ? '/fr' : '';
+const path = Astro.url.pathname;
+const otherLocaleHref = lang === 'fr' ? path.replace(/^\/fr/, '') || '/' : `/fr${path}`;
+const tr = t(lang);
+---
+<header class="mx-auto max-w-4xl px-4 py-6 flex items-center justify-between">
+  <a href={base || '/'} class="font-bold text-lg">zorko.xyz</a>
+  <nav class="flex gap-6 text-sm">
+    <a href={`${base}/#projects`} class="hover:underline">{tr('nav.projects')}</a>
+    <a href={`${base}/about`} class="hover:underline">{tr('nav.about')}</a>
+    <a href={otherLocaleHref} class="text-zinc-500 hover:underline">{lang === 'fr' ? 'EN' : 'FR'}</a>
+  </nav>
+</header>

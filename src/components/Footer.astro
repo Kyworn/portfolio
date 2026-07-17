@@ -1,0 +1,8 @@
+---
+import { t, type Lang } from '../i18n/ui';
+const { lang } = Astro.props as { lang: Lang };
+---
+<footer class="mx-auto max-w-4xl px-4 py-10 text-sm text-zinc-500 flex justify-between">
+  <span>{t(lang)('footer.selfhosted')}</span>
+  <a href="https://github.com/Kyworn" class="hover:underline">GitHub</a>
+</footer>
